@@ -6,7 +6,7 @@
         <meta name="author" content="Prakash Srivastav">
         {{-- <meta name="csrf-token" content="{{ csrf_token() }}"> --}}
 
-        <title>Taravel 10 Todo App</title>
+        <title>Todo App In Laravel 10</title>
 
         <link rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">
     </head>
