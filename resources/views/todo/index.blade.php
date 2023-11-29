@@ -48,6 +48,10 @@
         </tbody>
     </table>
 
+    <div class="d-flex">
+        {!! $todos->links() !!}
+    </div>
+
     <script>
         function validateForm() {
             var result = confirm("Are you sure you want to delete a task?");
