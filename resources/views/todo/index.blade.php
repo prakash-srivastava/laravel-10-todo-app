@@ -10,6 +10,7 @@
             <tr>
                 <th scope="col">Task</th>
                 <th scope="col">Description</th>
+                <th scope="col">Image</th>
                 <th scope="col">Status</th>
                 <th scope="col">Action</th>
             </tr>
@@ -19,6 +20,13 @@
                 <tr>
                     <td>{{ $todo->task_name }}</td>
                     <td>{{ $todo->description ?? '-' }}</td>
+                    <td>
+                        @if ($todo->issue_path)
+                            <img src="{{ asset($todo->issue_path) }}" width="100" alt="Issue image">
+                        @else
+                            -
+                        @endif
+                    </td>
                     <td>
                         @if ($todo->is_complete == 1)
                             <span class="badge bg-success">Complete</span>

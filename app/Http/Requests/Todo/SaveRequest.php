@@ -23,7 +23,8 @@ class SaveRequest extends FormRequest
     {
         return [
             'task_name' => 'required',
-            'description' => 'nullable'
+            'description' => 'nullable',
+            'issue_path' => 'nullable|mimes:png,jpg,jpeg,pdf|max:2048'
         ];
     }
 }
