@@ -10,7 +10,9 @@ class Todo extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = ['task_name', 'description', 'is_complete'];
+    protected $fillable = ['task_name', 'description', 'issue_path', 'is_complete'];
 
     protected $hidden = ['updated_at', 'deleted_at'];
+
+    protected $guarded = [];
 }

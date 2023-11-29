@@ -24,6 +24,7 @@ class UpdateRequest extends FormRequest
         return [
             'task_name' => 'required',
             'description' => 'nullable',
+            'issue_path' => 'nullable|mimes:png,jpg,jpeg,pdf|max:2048',
             'is_complete' => 'required|in:0,1'
         ];
     }

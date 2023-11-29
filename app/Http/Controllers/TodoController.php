@@ -34,6 +34,14 @@ class TodoController extends Controller
     {
         $data = $request->all();
 
+        if($request->file('issue_path')) {
+            $fileName = time() . '_' . $request->issue_path->getClientOriginalName(); // . '.' . $request->issue_path->extension();
+            $request->issue_path->move(public_path('uploads'), $fileName);
+
+            $issuePath = 'uploads/' . $fileName;
+            $data['issue_path'] = $issuePath;
+        }
+
         Todo::create($data);
 
         return redirect()->route('todo.index')->with('success', 'Task created successfully.');
@@ -63,6 +71,14 @@ class TodoController extends Controller
     public function update(UpdateRequest $request, string $id)
     {
         $data = $request->all();
+
+        if($request->file('issue_path')) {
+            $fileName = time() . '_' . $request->issue_path->getClientOriginalName(); // . '.' . $request->issue_path->extension();
+            $request->issue_path->move(public_path('uploads'), $fileName);
+
+            $issuePath = 'uploads/' . $fileName;
+            $data['issue_path'] = $issuePath;
+        }
 
         Todo::find($id)->update($data);
 
