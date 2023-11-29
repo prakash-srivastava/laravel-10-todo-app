@@ -8,11 +8,11 @@
     <table class="table">
         <thead>
             <tr>
-                <th scope="col">Task</th>
-                <th scope="col">Description</th>
-                <th scope="col">Image</th>
-                <th scope="col">Status</th>
-                <th scope="col">Action</th>
+                <th scope="col" class="col-sm-3">Task</th>
+                <th scope="col" class="col-sm-5">Description</th>
+                <th scope="col" class="col-sm-1">Image</th>
+                <th scope="col" class="col-sm-1">Status</th>
+                <th scope="col" class="col-sm-2">Action</th>
             </tr>
         </thead>
         <tbody>
